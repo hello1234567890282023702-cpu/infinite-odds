@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Infinite Odds - Aura Index</title>
+<style>
+:root{--bg:#1a1400;--card:#2a2100;--text:#fff9c4;--muted:#d4c46a;--a:#ffe600;--b:#b38f00;--line:#5c4a00;--glow:rgba(255,230,0,.3);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff9c4;--card:#fffde7;--text:#2e2500;--muted:#6b5a00;--line:#e6d24d;--glow:rgba(179,143,0,.3)}}
+:root[data-theme="light"]{--bg:#fff9c4;--card:#fffde7;--text:#2e2500;--muted:#6b5a00;--line:#e6d24d;--glow:rgba(179,143,0,.3)}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Fredoka","Baloo 2",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.4}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:blur(10px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px}
+.logo{font-weight:900;letter-spacing:1px;white-space:nowrap}
+.g{background:linear-gradient(90deg,var(--a),var(--b),var(--a));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 4s linear infinite}
+@keyframes sh{to{background-position:200% center}}
+.nb{display:flex;gap:8px}
+.btn{padding:9px 16px;border-radius:11px;font-weight:800;text-decoration:none;font-size:14px;color:#1a1500;background:linear-gradient(90deg,var(--a),var(--b));font-family:inherit;border:0}
+.btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
+h1{text-align:center;font-size:clamp(32px,8vw,56px);margin:26px 0 4px;font-weight:900}
+.sub{text-align:center;color:var(--muted);margin:0 0 18px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+#q,#s{padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-family:inherit;font-size:16px}
+#q{flex:1;min-width:180px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{padding:7px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--text);font-weight:700;font-family:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:var(--cc,var(--a));border-color:var(--cc,var(--a));color:#1c1230}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding-bottom:40px}
+.c{position:relative;text-align:center;padding:16px 8px 12px;border-radius:18px;background:var(--card);border:1px solid var(--line);color:var(--text);font-family:inherit;cursor:pointer;transition:transform .15s,border-color .15s,box-shadow .2s}
+.c:hover{transform:translateY(-4px);border-color:var(--a);box-shadow:0 8px 24px var(--glow)}
+.o{display:block;width:62px;height:62px;border-radius:50%;margin:0 auto 10px;background:radial-gradient(circle at 35% 30%,var(--c),var(--d) 85%);box-shadow:0 0 22px var(--c);border:2px solid rgba(255,255,255,.28)}
+.c b{display:block;font-size:16px}.c small{display:block;color:var(--muted);font-size:12px}
+.c em{display:inline-block;margin-top:6px;font-style:normal;font-size:11px;font-weight:800;padding:2px 9px;border-radius:99px;background:var(--t);color:#1c1230}
+.c i{position:absolute;top:8px;left:10px;font-style:normal;font-size:11px;color:var(--muted)}
+.none{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px}
+dialog{border:1px solid var(--line);border-radius:24px;background:var(--card);color:var(--text);padding:28px 24px;width:min(360px,92vw);text-align:center}
+dialog::backdrop{background:rgba(0,0,0,.65);backdrop-filter:blur(4px)}
+dialog .o{width:130px;height:130px;margin-bottom:16px;animation:fl 3s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px)}}
+dialog h2{margin:0;font-size:32px}.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}.row b{color:var(--text)}
+.nv{display:flex;gap:8px;margin-top:16px}.nv button{flex:1;padding:11px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--text);font-weight:800;font-family:inherit;font-size:15px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">&#9854;&#65039; INFINITE <span class="g">ODDS</span></div><div class="nb"><a class="btn" href="https://www.roblox.com/share?code=1032b2bb707ecd41af337c5270e2bc44&type=ExperienceDetails&stamp=1792130850118" target="_blank" rel="noopener">&#9654; Play</a><a class="btn alt" href="https://discord.gg/NcxeY4HCeF" target="_blank" rel="noopener">Discord</a></div></div></header>
+<main class="wrap">
+<h1>Aura <span class="g">Index</span></h1>
+<p class="sub" id="sub"></p>
+<div class="bar"><input id="q" type="search" placeholder="Search auras" autocomplete="off"><select id="s"><option value="r">Rarest first</option><option value="c">Most common first</option><option value="a">A to Z</option></select></div>
+<div class="chips" id="chips"></div>
+<div class="grid" id="g"></div>
+</main>
+<dialog id="dg"></dialog>
+<script>
+var A=[["Common",2,"#f0f0f0","#f0f0f0"],["Spark",2,"#ffebaa","#ffebaa"],["Dust",3,"#beaa8c","#beaa8c"],["Uncommon",4,"#96ff96","#96ff96"],["Breeze",4,"#a0e6f0","#a0e6f0"],["Pebble",5,"#8c8782","#8c8782"],["Mist",6,"#c8dce1","#c8dce1"],["Natural",8,"#55ff64","#55ff64"],["Sprout",9,"#82e66e","#82e66e"],["Gloom",10,"#64646e","#64646e"],["Good",12,"#b4b4b4","#b4b4b4"],["Ember",16,"#ff7832","#ff7832"],["Dusk",20,"#ff9664","#ff9664"],["Glimmer",25,"#ffd764","#ffd764"],["Ashen",35,"#aaa09b","#aaa09b"],["Tide",45,"#00beff","#00beff"],["Frost",55,"#c8f0ff","#c8f0ff"],["Static",75,"#50c8ff","#50c8ff"],["Rust",90,"#b7410e","#b7410e"],["Bloom",120,"#ff82b4","#ff82b4"],["Overgrowth",200,"#32cd32","#32cd32"],["Prism",250,"#ff78c8","#78dcff"],["Volt",350,"#fff000","#ff9600"],["Ignition",500,"#ff8c00","#b40000"],["Magma",650,"#ff5000","#5a0a00"],["Toxic",800,"#64ff00","#1e6400"],["Aurora",950,"#50ffaa","#965aff"],["Subzero",1200,"#b9f0ff","#1e78ff"],["Cyclone",1800,"#aae6ff","#3c6ec8"],["Phantom",2500,"#8c8cbe","#282846"],["Mirage",3200,"#ffd28c","#ff78a0"],["Retrowave",4000,"#ff1493","#00e6ff"],["Lunar",6000,"#e1e6ff","#5a64a0"],["Solaris",8500,"#ffb400","#ff3c00"],["Wraith",11000,"#96ffc8","#143c32"],["Eclipse",15000,"#141414","#ffffff"],["Boundless",18000,"#e61e1e","#ffffff"],["Zenith",24000,"#fff5be","#ffaa3c"],["Tempest",32000,"#50a0ff","#c8e6ff"],["Stardust",40000,"#fff0c8","#8c78ff"],["Inferno",45000,"#ffc800","#c81400"],["Supernova",60000,"#b432e6","#ff69b4"],["Quasar",90000,"#78c8ff","#ffffff"],["Celestial",110000,"#ffe696","#78d2ff"],["Oblivion",180000,"#46006e","#000000"],["Singularity",250000,"#0f001e","#8200ff"],["Pulsar",350000,"#00ffff","#ff00c8"],["InfraRed",500000,"#ff003c","#320014"],["Solstice",650000,"#ffdc5a","#3ca0ff"],["Abyssal",800000,"#00e6b4","#001e5a"],["Tesseract",1100000,"#64ffff","#1e1e78"],["Nebula",1500000,"#dc50ff","#32b4ff"],["Paradox",2200000,"#ffffff","#ff0050"],["Vorticity",2500000,"#39ff14","#009650"],["Glitch",4500000,"#00ff64","#ff0078"],["Aetherius",7500000,"#ffffff","#ffc832"],["Armageddon",9000000,"#ff5a00","#140000"],["Superconductor",12500000,"#00f0ff","#b400ff"],["Overclock",18000000,"#00ffdc","#ff1e46"],["Supernova",30000000,"#ff32b4","#ffdc00"],["Cataclysm",50000000,"#ff3200","#280a0a"],["Hyperion",85000000,"#ffd250","#ffffff"],["Event Horizon",120000000,"#8c1eff","#0a0028"],["Superluminal",220000000,"#ffffff","#64c8ff"],["Chronos",400000000,"#ffd700","#8b4513"],["Ragnarok",800000000,"#b40000","#1e003c"],["Genesis",1500000000,"#ffffff","#00dcff"],["Omnipotent",3000000000,"#ffd700","#ff0078"],["Infinity",5000000000,"#ffffff","#000000"],["Eternity",10000000000,"#fff5c8","#7800ff"]];
+var TI=[["Common",25,"#c4c8d7"],["Rare",1e3,"#4da6ff"],["Epic",1e5,"#b26aff"],["Legendary",1e7,"#ffb828"],["Mythic",Infinity,"#ff4d6d"]];
+function f(v){return v.toLocaleString("en-US")}
+function tier(c){for(var i=0;i<TI.length;i++)if(c<TI[i][1])return TI[i]}
+function pct(c){var p=100/c;return p.toFixed(Math.min(12,Math.max(0,Math.ceil(-Math.log10(p))+2)))+"%"}
+var q=document.getElementById("q"),s=document.getElementById("s"),g=document.getElementById("g"),ch=document.getElementById("chips"),dg=document.getElementById("dg"),tf=null,cur=[];
+document.getElementById("sub").textContent=A.length+" auras, from 1 in "+f(A[0][1])+" to 1 in "+f(A[A.length-1][1]);
+function chips(){var h='<button class="chip'+(tf?'':' on')+'" data-t="">All</button>';TI.forEach(function(t){h+='<button class="chip'+(tf==t[0]?' on':'')+'" data-t="'+t[0]+'" style="--cc:'+t[2]+'">'+t[0]+'</button>'});ch.innerHTML=h}
+ch.onclick=function(e){var b=e.target.closest(".chip");if(!b)return;tf=b.dataset.t||null;chips();draw()};
+function orb(a){return'<span class="o" style="--c:'+a[2]+';--d:'+a[3]+'"></span>'}
+function draw(){var k=q.value.toLowerCase().trim(),L=[];
+A.forEach(function(a,i){if((!k||a[0].toLowerCase().indexOf(k)>-1)&&(!tf||tier(a[1])[0]==tf))L.push(i)});
+if(s.value=="r")L.reverse();if(s.value=="a")L.sort(function(x,y){return A[x][0].localeCompare(A[y][0])});
+cur=L;var h="";L.forEach(function(i){var a=A[i],t=tier(a[1]);h+='<button class="c" data-i="'+i+'"><i>#'+(i+1)+'</i>'+orb(a)+'<b>'+a[0]+'</b><small>1 in '+f(a[1])+'</small><em style="--t:'+t[2]+'">'+t[0]+'</em></button>'});
+g.innerHTML=h||'<div class="none">No auras found</div>'}
+function open(i){var a=A[i],t=tier(a[1]);
+dg.innerHTML=orb(a)+'<h2>'+a[0]+'</h2><div style="color:'+t[2]+';font-weight:800;margin:2px 0 14px">'+t[0]+'</div><div class="row"><span>Odds</span><b>1 in '+f(a[1])+'</b></div><div class="row"><span>Chance</span><b>'+pct(a[1])+'</b></div><div class="row"><span>Rank</span><b>#'+(i+1)+' of '+A.length+'</b></div><div class="nv"><button data-d="-1">&larr; Prev</button><button data-d="1">Next &rarr;</button><button data-d="0">Close</button></div>';
+dg.dataset.i=i;if(!dg.open)dg.showModal()}
+g.onclick=function(e){var b=e.target.closest(".c");if(b)open(+b.dataset.i)};
+dg.onclick=function(e){var b=e.target.closest("button");if(e.target===dg){dg.close();return}if(!b)return;var d=+b.dataset.d;if(!d){dg.close();return}var i=+dg.dataset.i+d;if(i>=0&&i<A.length)open(i)};
+q.oninput=draw;s.onchange=draw;chips();draw();
+</script>
+</body>
+</html>
